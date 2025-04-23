@@ -1,19 +1,15 @@
 class Producto:
     """Clase que modela un producto de la tienda."""
     
-    def _init_(self, nombre: str, precio: int, cantidad: int):
+    def __init__(self, nombre: str, precio: int, cantidad: int):
         """
         Inicializa un producto con nombre, precio unitario y cantidad.
-        
-        :param nombre: Nombre del producto.
-        :param precio: Precio unitario en COP.
-        :param cantidad: Cantidad disponible en unidades.
         """
         self.nombre = nombre
         self.precio = precio
         self.cantidad = cantidad
 
-    def _str_(self):
+    def __str__(self):
         """Devuelve una representación en texto del producto."""
         return f"|{self.nombre:<10} |{self.cantidad:<12} unidades |{self.precio:<10} pesos |"
 
@@ -37,5 +33,5 @@ def main():
         print("> " + str(producto))
 
 
-if _name_ == "__main__":
+if __name__ == "__main__":
     main()
